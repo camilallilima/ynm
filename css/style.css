@@ -1,53 +1,35 @@
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
-/* Estilos Fonts */
-/*
-
-Winky Rough: 
-    font-family: "Winky Rough", sans-serif;
-
-Poetsen One: 
-    font-family: "Poetsen One", sans-serif;
-
-Poppins: 
-    font-family: "Poppins", sans-serif;
-
-*/
-
-
-
-
-/* variavel para as cores  */
+/* variavel para as cores */
 :root {
+    --background-color: rgba(20, 15, 30, 0.55);
 
-    --background-color: rgba(5, 13, 24, 0.555);
+    --fundo-menu-lateral: #3c2a4d; /* Roxo escuro */
+    --fundo-claro: #d3d3d3;        /* Prata claro */
+    --fundo-escuro: #1a1a1a;       /* Preto profundo */
 
-    --fundo-menu-lateral: #57362b;
-    --fundo-claro: #a6afb4;
-    --fundo-escuro: #2f3538;
+    --borda-clara: #bfa5d6;        /* Roxo claro puxado para prata */
+    --borda-escura: #4b3b5a;       /* Roxo escuro com contraste */
 
-    --borda-clara: #b27059;
-    --borda-escura: #037F8C;
+    --texto-escuro: #0f0f0f;       /* Quase preto */
+    --texto-claro: #dcdce6;        /* Prata mais clara */
+    --texto-branco: #f5f5f5;
+    --texto-hover: #b48ec2;        /* Roxo suave para hover */
+    --texto-opaco: #8e8e99;        /* Prata opaco */
 
-    --texto-escuro: #161616;
-    --texto-claro: #c8d4db;
-    --texto-branco: #ecf8ff;
-    --texto-hover: #218591;
-    --texto-opaco: #81888c;
+    --cor-detalhes: #9c7fc2;       /* Roxo médio para destaques */
 
-    --cor-detalhes: #149ddd;
+    --texto-titulo-claro: #d1c2e9; /* Título com prata/lavanda */
+    --texto-titulo-escuro: #5c4a72;/* Título mais escuro, elegante */
 
-    --texto-titulo-claro: #38E0F2;
-    --texto-titulo-escuro: #037F8C;
-
-    --sombra-clara: rgba(255, 255, 255, 1);
-    --sombra-escura: rgba(31, 31, 31, 0.1);
+    --sombra-clara: rgba(255, 255, 255, 0.3);
+    --sombra-escura: rgba(0, 0, 0, 0.4);
 }
 
 /* CSS Geral */
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Quicksand", sans-serif;
     color: var(--texto-claro);
     background: var(--fundo-escuro);
 }
@@ -69,9 +51,9 @@ body {
 #header .perfil img {
     margin: 15px auto;
     display: block;
-    width: 120px;
+    width: 13rem;
     border: 2px solid var(--borda-clara);
-    box-shadow: 0 0 5px var(--sombra-clara);
+    box-sizing: 0 0 5px var(--sombra-clara);
 }
 
 #header .perfil h1 {
@@ -80,11 +62,10 @@ body {
     padding: 0;
     font-weight: 600;
     text-align: center;
-    color: wheat;
+    color: rgb(177, 177, 177);
 }
 
-
-/* Redes Sociais */
+/* Redes Socias */
 
 .perfil .social-links i {
     font-size: 18px;
@@ -99,7 +80,7 @@ body {
     width: 35px;
     height: 35px;
     transition: 0.3s;
-    box-shadow: 0px 0px 5px 0px var(--sombra-clara);
+    box-shadow: 0px 0px 5px 0px var(--sombra-escura);
 }
 
 .perfil .social-links a:hover,
@@ -107,28 +88,23 @@ body {
     font-size: 18px;
     display: inline-block;
     background: white;
-    color: black;
+    color: var(--texto-escuro);
     margin-right: 5px;
     border-radius: 50%;
     width: 35px;
     height: 35px;
-    box-shadow: 0px 0px 5px 0px var(--sombra-clara);
+    box-shadow: 0px 0px 5px 0px var(--sombra-escura);
 }
 
-a {
-    text-decoration: none;
-}
-
-/* Menu mobile */
 .mobile-nav-toggle {
     position: fixed;
     top: 15px;
     right: 15px;
-    z-index: 9999;
+    z-index: 99999;
     border: 0;
     font-size: 26px;
     transition: all 0.4s;
-    background: var(--cor-detalhes);
+    background: var(--fundo-menu-lateral);
     color: var(--texto-claro);
     width: 40px;
     height: 40px;
@@ -146,9 +122,9 @@ a {
 .mobile-nav-active #header {
     left: 0;
 }
+/* Ajuste para o corpo do conteudo */
+/* estrutura Base - Corpo */
 
-/* Ajuste para o Corpo do Conteudo */
-/* Estrutura Base - Corpo */
 #main {
     margin-left: 300px;
 }
@@ -158,8 +134,9 @@ a {
     padding-right: 30px;
 }
 
-
 /* menu responsivo */
+
+
 @media (max-width: 1199px) {
     #header {
         left: -300px;
@@ -173,12 +150,9 @@ a {
     }
 }
 
-/* Menu do Header */ 
-.nav-menu {
-    padding: 30px 0 0 0;
-}
+/* menu do header */
 
-.nav-menu * {
+.nav-menu *{
     padding: 0;
     margin: 0;
     list-style: none;
@@ -188,7 +162,6 @@ a {
     position: relative;
     white-space: nowrap;
 }
-
 .nav-menu a,
 .nav-menu:focus {
     display: flex;
@@ -199,38 +172,29 @@ a {
     transition: 0.3s;
     font-size: 15px;
 }
-
-.nav-menu a i,
-.nav-menu a:focus i {
-    font-size: 22px;
-    padding-right: 10px;
-}
-
 .nav-menu a:hover,
 .nav-menu .active,
 .nav-menu .active:focus,
 .nav-menu li:hover>a {
     text-decoration: none;
-    color: var(--texto-claro);
-    font-weight: 600;
+    color: var(--sombra-escura);
 }
 
 .nav-menu a:hover i,
 .nav-menu .active i,
 .nav-menu .active:focus i,
 .nav-menu li:hover>a i {
-    color: var(--cor-detalhes);
-    font-weight: 600;
+    color: var(--sombra-escura);
 }
 
 /* HERO */
 #hero {
-   width: 100%;
-   height: 100vh; /* view Port Height */ 
-   background: url("../img/bg-hero1.png") bottom;
-   /* Criar img na I.A. */
-   background-size: cover;
-   position: relative;
+    width: 100%;
+    height: 100vh; /* view Port Heigth */
+    background: url("../img/bg-hero.png");
+    /* Criar img na I.A */
+    background-size: cover;
+    position: relative;
 }
 
 #hero::before {
@@ -238,77 +202,78 @@ a {
     position: absolute;
     z-index: 2;
     inset: 0;
-    background-color: rgba(35, 24, 24, 0.5);
+    background-color: rgba(42, 7, 117, 0.652);
 }
 
 #hero .hero-container {
+    font-family: "Playwrite CU", cursive;
     z-index: 3;
     position: relative;
-    min-width: 300px;
+    min-height: 300px;
+    
 }
 
 #hero h2 {
     margin: 0;
     font-size: 100px;
-    font-weight: 600;
-    line-height: 1;
-    color: #fff; 
+    font-weight: 500;
+    line-height: 120px;
+    color: var(--texto-claro);
 }
 
 #hero p {
-    color: #fff;
+    color: var(--texto-branco);
     margin-top: 15px;
     margin-bottom: 50px;
     font-size: 26px;
+
 }
 
 #hero p span {
-    color: #b79b90;
+    color: var(--texto-claro);
     padding-bottom: 4px;
-    letter-spacing: 2px;
-    border-bottom: 3px solid #f4c119;
+    letter-spacing: 1px;
+    border-bottom: 3px solid var(--texto-escuro);
 }
-
-@media (min-width: 1024px) {
-    #hero {
+@media (max-width:1024px) {
+    #hero{
         background-attachment: fixed;
     }
 }
 
-@media (max-width: 1024px) {
-    #hero {
-        background-attachment: fixed;
-    }
-}
-
-@media (max-width: 768px)  {
+@media (max-width: 768px) {
     #hero h2 {
-        font-size: 75px;
+        font-size: 70px;
         line-height: 1;
         margin-bottom: 20px;
     }
+    
     #hero p {
         font-size: 28px;
     }
 }
 
+/* estrutura Base - Corpo */
+#main {
+    margin-left: 300px;
+}
 
-
+.container {
+    padding-left: 30px;
+    padding-right: 30px;
+}
 
 /* Seções e Titulos */
 section {
     padding: 60px 0;
     overflow: hidden;
-    /* clara */
-    /* background: var(--section-clara); */
-    background: #9f7667;
-    
+    background: #380967;
 }
 
 .section-bg {
     /* escura */
     /* background: var(--section-escura); */
-    background: #57362b;
+    background: rgb(182, 182, 182);
     color: var(--texto-claro);
 }
 
@@ -317,22 +282,22 @@ section {
     padding-bottom: 30px;
 }
 
-/* titulo H2 */
+/* título H2 */
 .section-title h2 {
-    color: #4a2e24;
+    color: var(--texto-escuro);
     font-weight: 600;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+    margin-bottom: 20 px;
+    padding-bottom: 20 px;
     position: relative;
-    font-family: "Poetsen One", sans-serif;
 }
 
 .section-title h2::after {
     content: "";
     position: absolute;
-    background: #4a2e24;
-    width: 50px;
+    display: block;
+    background: #d1d6db;
     height: 3px;
+    width: 50px;
     display: block;
     bottom: 0;
     left: 0;
@@ -344,10 +309,10 @@ section {
 
 /* Sobre */
 .sobre .content h3 {
-    color: #4a2e24;
-    font-weight: 700;
+    color:  #1A1A1A;
+    font-weight:700;
     font-size: 26px;
-    font-family: "Winky Rough", sans-serif;
+    font-family: "Roboto Slab", serif;
 }
 
 .sobre .content ul {
@@ -366,8 +331,11 @@ section {
     margin-right: 5px;
     font-weight: 600;
     /* letter-spacing: .5px; */
-    font-family: "Poppins", sans-serif;
+    font-family: "Quicksand", sans-serif;
 }
+
+
+
 
 .sobre .content ul i {
     color: var(--fundo-menu-lateral);
@@ -380,7 +348,7 @@ section {
     padding-bottom: 30px;
 }
 
-.conquistas .count-box {
+.conquistas{
     padding: 30px;
     width: 100%;
 }
@@ -390,15 +358,7 @@ section {
     font-size: 44px;
     display: block;
     float: left;
-    line-height: 0;
-}
-
-.conquistas .count-box .count-box-i {
-    color: var(--fundo-menu-lateral);
-    font-size: 44px;
-    display: block;
-    float: left;
-    line-height: 40px;
+    /* line-height: ; */
 }
 
 .conquistas .count-box span {
@@ -413,19 +373,17 @@ section {
 .conquistas .count-box p {
     padding: 15px 0 0 0;
     margin: 0 0 0 60px;
-    color: #5a382b;
+    color: rgb(255, 255, 255);
 }
 
 .conquistas .count-box strong {
     font-weight: 800;
 }
 
-.conquistas .count-box i:hover,
-.conquistas .count-box span:hover {
+.conquistas .count-box i:hover, .conquistas .count-box span:hover {
     color: var(--fundo-claro);
     transition: ease-in-out .5s;
 }
-
 
 /* Vendas // Skills = Habilidades */
 .skills .progress {
@@ -440,7 +398,7 @@ section {
     margin: 0 0 5px 0;
     text-transform: uppercase;
     display: block;
-    color: #c0c0c0;
+    color: #ffffff;
     font-weight: 800;
     font-size: 16px;
 }
@@ -448,12 +406,19 @@ section {
 .skills .progress .skill .val {
     font-style: normal;
     float: right;
-    color: #c0c0c0;
+    color: rgb(0, 0, 0);
     font-weight: 800;
     font-size: 16px;
 }
 
 .skills .progress-bar-bg {
-    background: #a6afb4;
+    background: #3e028d;
     height: 10px;
+}
+
+.skills .progress-bar {
+    height: 10px;
+    background: #fdfdfd;
+    transition: 5s;
+    width: 1px;
 }
